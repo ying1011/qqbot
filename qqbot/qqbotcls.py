@@ -192,7 +192,10 @@ class QQBot(GroupManager, TermBot):
             content = '[@ME] ' + content.replace('@'+nameInGroup, '')
         else:
             content = content.replace('@ME', '@Me')
-                
+            
+        if len(content) == 0 :
+            content = '[图片]'
+
         if ctype == 'buddy':
             INFO('来自 %s 的消息: "%s"' % (contact, content))
         else:

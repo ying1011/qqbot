@@ -30,10 +30,10 @@ sampleConfStr = '''
         "httpServerPort" : 8189,
         
         # 自动登录的 QQ 号
-        "qq" : "3497303033",
+        "qq" : "1851956004",
         
         # 接收二维码图片的邮箱账号
-        "mailAccount" : "3497303033@qq.com",
+        "mailAccount" : "1851956004@qq.com",
         
         # 该邮箱的 IMAP/SMTP 服务授权码
         "mailAuthCode" : "feregfgftrasdsew",
