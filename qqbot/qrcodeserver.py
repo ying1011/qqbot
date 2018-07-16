@@ -26,7 +26,6 @@ class QrcodeServer(MySocketServer):
                 url = request[5:end-9].rstrip('/')
         
         resp = b''
-        print("2222")
         if (url is not None) and (url != 'favicon.ico'):
             try:
                 with open(self.qrcodePath, 'rb') as f:

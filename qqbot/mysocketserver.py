@@ -33,9 +33,6 @@ class MySocketServer(object):
             while True:
                 try:
                     sock, addr = self.sock.accept()
-                    print ("666")
-                    print(sock)
-                    print(addr)
                 except socket.error as e:
                     ERROR('%s 发生 accept 错误，%s', self.name, e)
                     self.onAcceptError(e)
@@ -45,10 +42,7 @@ class MySocketServer(object):
     def onAccept(self, sock, addr):
         sock.settimeout(10.0)
         try:
-            print("1111")
             data = sock.recv(8192)
-            # data = "ccc"
-            print(data)
         except socket.error as e:
             ERROR('%s 在接收来自 %s:%s 的数据时发送错误，%s', self.name, addr[0], addr[1], e)
             self.onRecvError(sock, addr, e)
@@ -104,7 +98,6 @@ class MySocketServer(object):
 def Query(host, port, req):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     resp = b''
-    print ("555")
     try:
         sock.connect((host, int(port)))
         sock.sendall(req)
